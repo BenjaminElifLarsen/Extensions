@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "akjtJrwLtGYKG3gth/L5H54wkN2l4LHvPo8yrHM8/ruidQkO3xdlWD6mPE1kkBlC3dCVPl+4syxSVOxNGvfDHA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Benjamin Elif Larsen\\Desktop\\Extensions\\Extensions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Benjamin Elif Larsen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Benjamin Elif Larsen\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

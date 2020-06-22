@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:Extensions.ArrayExtensions">
+            <summary>
+            Contains custom extensions for arrays.
+            <list type="bulet">
+            <item>
+            <term>+Display(arrayToDisplay:T[],seperactor:string):void</term>
+            <description>Displays all entires in arrayToDisplay and uses seperactor if signs need to be place between them.</description>
+            </item>
+            <item>
+            <term>+Selection(arrayToExtractForm:T[], startLocation:uint, stopLocation:uint):T[]</term>
+            <description>Returns array of T consisting of all entries from startLocation to and with stopLocation.</description>
+            </item>
+            <item>
+            <term>+Concat(orginalArray:T[], arraysToAdd:params T[][]):T[]</term>
+            <description>Concats multiple arrays of same type together to a single array and return it.</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Extensions.ArrayExtensions.Display``1(``0[],System.String)">
+            <summary>
+            Displays all the content of an array. The variable <paramref name="seperactor"/> can be used to add a string between each value of <paramref name="arrayToDisplay"/>.
+            </summary>
+            <typeparam name="T">Can be any datatype of array.</typeparam>
+            <param name="arrayToDisplay">The array to display.</param>
+            <param name="seperactor">Seperate the values of <paramref name="arrayToDisplay"/>.</param>
+        </member>
+        <member name="M:Extensions.ArrayExtensions.Selection``1(``0[],System.UInt32,System.UInt32)">
+            <summary>
+            Returns array consisting of a specific part of <paramref name="arrayToExtractFrom"/>. 
+            The first index value is <paramref name="startLocation"/> and the last index value is <paramref name="stopLocation"/>.
+            The length of the new array is <c>1 + <paramref name="stopLocation"/> - <paramref name="startLocation"/></c>.
+            E.g. if <c><paramref name="startLocation"/> = 0</c> and <c><paramref name="stopLocation"/> = 3</c>, the return array's length will be 4.
+            If an exception is caught, the method will return null. 
+            If <paramref name="startLocation"/> equal <paramref name="stopLocation"/> the method will return a null.
+            </summary>
+            <typeparam name="T">Data type of the array.</typeparam>
+            <param name="arrayToExtractFrom">The array that should be trimmed.</param>
+            <param name="startLocation">The start index.</param>
+            <param name="stopLocation">The stop index.</param>
+            <returns>Returns an array consisting of values from <paramref name="arrayToExtractFrom"/> going from <paramref name="startLocation"/> up to <paramref name="stopLocation"/>. 
+            It will return null if an expection is caught. If <paramref name="startLocation"/> equal <paramref name="stopLocation"/> it will return a null array.</returns>
+        </member>
+        <member name="M:Extensions.ArrayExtensions.Concat``1(``0[],``0[][])">
+            <summary>
+            Concats mutliple arrays together.  
+            </summary>
+            <typeparam name="T">Can be any datatype of array.</typeparam>
+            <param name="originalArray">The first array to concat.</param>
+            <param name="arraysToAdd">The remaining arrays to concats.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Extensions.StringExtensions">
+            <summary>
+            Contain custom extensions for strings.
+            <list type="bulet">
+            <item>
+            <term>+AddChar(str:string, chr:char):string</term>
+            <description>Adds a char to the end of a string and returns the string.</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Extensions.StringExtensions.AddChar(System.String,System.Char)">
+            <summary>
+            Adds a char to the end of a string.
+            </summary>
+            <param name="str">The string a char to be addded to.</param>
+            <param name="chr">The char to be added.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Extensions.StringExtensions.ToUpperFirst(System.String)">
+            <summary>
+            Work in progress
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Extensions.StringExtensions.SplitAtLocation(System.String,System.UInt32)">
+            <summary>
+            Splits a string into two strings based upon <paramref name="posistion"/>. 
+            All entires up to and with <paramref name="posistion"/> will become the first string.
+            All other entires will become the second string.
+            </summary>
+            <param name="str"></param>
+            <param name="posistion"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
